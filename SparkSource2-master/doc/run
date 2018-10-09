@@ -1,0 +1,8 @@
+#创建topic
+kafka-topics.sh --zookeeper ha01:2181,ha02:2181,ha03:2181 --create --topic user --replication-factor 2 --partitions 2
+#查看主题
+kafka-topics.sh --zookeeper ha01:2181,ha02:2181,ha03:2181 --list
+#查看主题详情
+kafka-topics.sh --zookeeper ha01:2181,ha02:2181,ha03:2181 --describe --topic user
+#创建消费者 consumer
+kafka-console-consumer.sh --zookeeper ha01:2181,ha02:2181,ha03:2181 --topic user --from-beginning

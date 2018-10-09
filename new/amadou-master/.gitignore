@@ -1,0 +1,14 @@
+target/
+.DS_Store
+.idea/
+.iml
+
+# spark-testing-base runtime files
+derby.log
+
+# Ensime
+.ensime*
+
+bin/.coursier
+bin/.scalafmt-*
+
